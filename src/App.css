@@ -1,0 +1,138 @@
+
+.app {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  padding: 16px;
+  text-align: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8f9fc 0%, #e5ecff 100%);
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #212121;
+}
+
+.pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 220px);
+  justify-content: center;
+  gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pokemon-card {
+  width: 220px;
+  border: 2px solid #aaa;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 8px 18px rgba(34, 60, 80, 0.12);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.pokemon-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(34, 60, 80, 0.2);
+}
+
+.pokemon-avatar {
+  width: 100%;
+  max-width: 128px;
+  height: auto;
+  margin: 16px auto 0;
+  display: block;
+}
+
+.pokemon-info {
+  padding: 12px 14px 16px;
+  text-align: left;
+}
+
+.pokemon-info h2 {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+  letter-spacing: 0.02em;
+}
+
+.pokemon-info p {
+  margin: 4px 0;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+.stat-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 6px;
+  margin: 5px 0 3px;
+  font-size: 0.85rem;
+  color: #333;
+}
+
+.stat-label {
+  font-weight: 600;
+  min-width: 30px;
+}
+
+.stat-value {
+  min-width: 36px;
+  text-align: right;
+}
+
+.stat-track {
+  width: 100%;
+  height: 9px;
+  border-radius: 99px;
+  background: #e0e0e5;
+  overflow: hidden;
+}
+
+.stat-fill {
+  height: 100%;
+  border-radius: 99px;
+}
+
+.stat-fill.hp { background: #4caf50; }
+.stat-fill.atk { background: #f44336; }
+
+.pokemon-type {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  color: white;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.type-filter {
+  margin: 14px auto 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.type-button {
+  border: 1px solid #888;
+  background: #fff;
+  color: #333;
+  border-radius: 999px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: all 0.16s ease;
+}
+
+.type-button:hover {
+  transform: translateY(-1px);
+  border-color: #555;
+}
+
+.type-button.active {
+  background: #2c3e50;
+  color: #fff;
+  border-color: #2c3e50;
+}
